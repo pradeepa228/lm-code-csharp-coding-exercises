@@ -23,18 +23,17 @@ namespace Exercises
         
         public bool IsFromManchester(Person P1)
         {
-			if(P1 != null) 
-				return P1.City == "Manchester"; 	
-			else 
+			if(P1 != null) {
+				return P1.City == "Manchester";
+            }
+			else { 
                 return false;
+            }
         }
 
         public bool CanWatchFilm(Person P1, int ageLimit)
         {
-            if(P1.Age < ageLimit)    
-                return false;
-            else
-                return true;
+            return (P1.Age > ageLimit);
         }
     }
 }
