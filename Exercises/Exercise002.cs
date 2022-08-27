@@ -1,26 +1,40 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace Exercises
 {
+    public class Person
+    {
+		public string FirstName;
+		public string LastName;
+		public string City;
+        public int Age;
+
+		public Person(string firstname, string lastname, string city, int age)
+		{
+		    FirstName = firstname;
+		    LastName = lastname;
+		    City = city;
+            Age = age;
+		}
+	}
+
     public class Exercise002
     {
-        // 👉 Remember to delete all unnecessary comments (like this one) when you're done! 
-
-        public bool IsFromManchester(/* Person person */)
+        
+        public bool IsFromManchester(Person P1)
         {
-            // 👉 DON'T FORGET to uncomment the tests in Exercise002Tests.cs 
-            // Uncomment the parameter above and delete this comment
-
-            // Replace the exception statement below with your code!
-            throw new NotImplementedException();
+			if(P1 != null) 
+				return P1.City == "Manchester"; 	
+			else 
+                return false;
         }
 
-        public bool CanWatchFilm(/*Person person, int ageLimit*/)
+        public bool CanWatchFilm(Person P1, int ageLimit)
         {
-            // 👉 DON'T FORGET to uncomment the tests in Exercise002Tests.cs 
-            // Uncomment the parameters above and delete this comment
-
-            // Replace the exception statement below with your code!
-            throw new NotImplementedException();
+            if(P1.Age < ageLimit)    
+                return false;
+            else
+                return true;
         }
     }
 }
