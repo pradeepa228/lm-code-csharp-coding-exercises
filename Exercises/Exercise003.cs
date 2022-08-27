@@ -10,10 +10,12 @@ namespace Exercises
            int iceCreamCode = 0;
           
            foreach (string str in IceCreamFlavours) {
-                if (str == inputIceCreamFlavour)
+                if (str == inputIceCreamFlavour) {
                   break;
-                else
+                }
+                else {
                    iceCreamCode++;
+                }
            } 
            return iceCreamCode;
         }
