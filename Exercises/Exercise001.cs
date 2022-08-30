@@ -21,22 +21,22 @@ namespace Exercises
 	{
 		public string CapitalizeWord(string word)
 		{
-			String str = "";
+			String returnValue = "";
 			if(word is null) {
 				return null;
 			} else {
 				int strLen = word.Length;
 			    if(strLen >= 1)
-		    	str = char.ToUpper(word[0]) + word.Substring(1);
+		    	returnValue = char.ToUpper(word[0]) + word.Substring(1);
 			}
-			return str;
+			return returnValue;
 		}
 
 		public string GenerateInitials(string firstName, string lastName)
 		{
-			String str = "";
-			str = char.ToUpper(firstName[0])+"."+char.ToUpper(lastName[0]) ;
-			return str;
+			String returnValue = "";
+			returnValue = char.ToUpper(firstName[0])+"."+char.ToUpper(lastName[0]) ;
+			return returnValue;
 		}
 
 		public double AddVat(double originalPrice, double vatRate)
@@ -76,8 +76,8 @@ namespace Exercises
 			int count = 0;
 			String strCheck = "Linux";
 			if(users != null) {
-				foreach(User a in users ){
-					if(a.OS == strCheck) 
+				foreach(User indUser in users ){
+					if(indUser.OS == strCheck) 
 						count++;
 				   
 				}

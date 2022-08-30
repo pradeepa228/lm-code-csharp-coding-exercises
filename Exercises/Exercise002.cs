@@ -1,39 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using Exercises.Models;
 namespace Exercises
 {
-    public class Person
-    {
-		public string FirstName;
-		public string LastName;
-		public string City;
-        public int Age;
-
-		public Person(string firstname, string lastname, string city, int age)
-		{
-		    FirstName = firstname;
-		    LastName = lastname;
-		    City = city;
-            Age = age;
-		}
-	}
-
     public class Exercise002
     {
         
-        public bool IsFromManchester(Person P1)
+        public bool IsFromManchester(Person inputPerson)
         {
-			if(P1 != null) {
-				return P1.City == "Manchester";
+			if(inputPerson != null) {
+				return inputPerson.City == "Manchester";
             }
-			else { 
-                return false;
-            }
+            return false;
         }
 
-        public bool CanWatchFilm(Person P1, int ageLimit)
+        public bool CanWatchFilm(Person inputPerson, int ageLimit)
         {
-            return (P1.Age > ageLimit);
+            return (inputPerson.Age > ageLimit);
         }
     }
 }
